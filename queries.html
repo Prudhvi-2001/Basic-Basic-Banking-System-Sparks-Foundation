@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Queries</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	body{
+		margin: 0px;
+		padding: 0px;
+		background-image: url("https://cdn.pixabay.com/photo/2016/11/30/12/16/question-mark-1872665_960_720.jpg");
+	}
+	.main{
+		text-align: center;
+		margin-top: 100px;
+		background-color: white;
+		padding: 8px;
+		width: 420px;
+
+}
+		form input[type="text"],input[type="number"]{
+			width: 300px;
+	
+	height:40px;
+	outline:0px;
+	border:1px solid green;
+	border-radius: 2px;
+	margin: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+		}
+		.topnav {
+  overflow: hidden;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+.topnav a.active {
+  
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: flex;
+    text-align: right;
+    outline: 0px;
+    margin-left: 400px;
+    margin-right: 10px;
+  }
+}
+.navbar {
+  background-color: none;
+}
+
+.navbar a {
+  float: left;
+  font-size: 8px;
+  
+}
+@media screen and (min-width: 600px){
+	.container{
+		width:auto;
+		height: auto;
+		padding: auto;
+	}
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="logo">
+			<h3 style="color:orangered;font-family: Lucida Handwriting;font-size: 30px;font-weight: 500;  box-shadow:2px 6px 18px rgba(66,57,238,0.3);">Sparks Bank</h3>
+
+			
+		</div>
+		
+	</div>
+	<div class="container">
+	<div class="topnav" id="myTopnav" style="float: right; padding: 5px;">
+        		<a href="http://localhost:8080/sparks%20Foundation/index.html"style="padding: 12px;margin-left: 10px;color: white; border: 2px solid green;" ><b>Home</b></a>
+
+		<a href="http://localhost:8080/sparks%20Foundation/service.html"style="padding: 12px;margin-left: 10px;color: white; border: 2px solid green;" ><b>Service</b></a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+
+  </a>
+</div>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+	<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+		<div class="main">
+			<h2 style="color:orangered; font-weight: 500;">We'll help you</h2>
+			<form action="number.php" method="post">
+				<input type="text" name="firstname" required="" placeholder="Enter First name">
+				<br>
+				<input type="text" name="secondname" required="" placeholder="Enter Second Name">
+				<br>
+				<input type="number" name="number" required="" placeholder="Enter Mobile Number">
+				<br>
+				<input type="text" name="slot" required="" placeholder="Enter time slot">
+                <br>
+                <button class="btn btn-success btn-lg" style="margin-top: 15px;outline: 0px;">Submit >></button>
+				
+			</form>
+			
+		</div>
+		</div>
+	
+	</div>
+	</div>
+</body>
+</html>

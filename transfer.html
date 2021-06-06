@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+    body{
+        background-color:  #ffffff;
+
+    }
+
+        .topnav {
+    
+  overflow: hidden;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+.topnav a.active {
+  
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: flex;
+    text-align: right;
+    outline: 0px;
+    margin-left: 400px;
+    margin-right: 10px;
+  }
+}
+.navbar {
+  background-color: none;
+}
+
+.navbar a {
+  float: left;
+  font-size: 8px;
+  
+}
+#netbalance{
+    background-color: #e6ffe6;
+    padding: 20px;
+}
+#bar1:hover{
+        transform: scale(1.1);
+
+
+}
+.fa {
+  padding: 10px;
+  font-size: 12px;
+  width: 40px;
+   height: 37px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+  color: red;
+   transform:scale(1.3);
+
+
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.footer{
+    background-color: #ccffe6;
+    padding: 8px;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+  
+        <div class="container">
+        <div class="logo">
+
+           <h1 style="color:orangered;font-family: Lucida Handwriting; margin-top: 55px;font-size: 30px;font-weight: 500;  box-shadow:2px 6px 18px rgba(66,57,238,0.3);
+" ><i><img src="https://th.bing.com/th/id/Rde014bfe120bc0277f300f65c650daac?rik=sP52aQXktFWE3w&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_454375.png&ehk=%2bOFR%2fOFX%2flGGzkrC9OFA1U0rDhv0QTs0ZPB2%2fN0r3wU%3d&risl=&pid=ImgRaw" width="5%" height="5%"></i><b>  Sparks Bank</b></h1>
+</div>
+        </div>
+        
+    </div>
+
+        <div class="container" style="margin-top:40px;" id="nav">
+    <div class="topnav" id="myTopnav" style="float: right; padding: 5px;">
+                <a href="http://localhost:8080/sparks%20Foundation/index.html"style="padding: 12px;margin-left: 10px;color: green; border: 1px solid green;" id="bar1" >Home</a>
+
+        <a href="http://localhost:8080/sparks%20Foundation/service.html"style="padding: 12px;margin-left: 10px;color: green; border: 1px solid green;" id="bar1" >Service</a>
+        <a href="http://localhost:8080/sparks%20Foundation/queries.html"style="padding: 12px;margin-left: 10px;color: green;border: 1px solid green;"id="bar1"  >contact</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+
+  </a>
+</div>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+    <div class="my-info text-center" style="margin-top: 120px;" id="netbalance">
+        <h2 style="margin-left: 0px; color: red;">Prudhvi</h2>
+        <h4>Net Balance: $<span id="myAccountBalance">20000</span></h4>
+
+        <button class="btn btn-info" data-toggle="modal" data-target="#sendMoney" style="border:1px solid green;color: green; margin-top: 10px;height: 39px;">Send Money</button>
+        <a class="btn btn-info" href="" data-toggle="modal" data-target="#transactionHistory" style="border:1px solid green;color: green; margin-top: 10px;text-align: center;height: 39px;">See All Transactions</a>
+    </div>
+
+
+    <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-exchange" aria-hidden="true" style="font-size: 18px;"></i>Transfer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-group mb-3">
+                            <input type="text" id="enterName" class="form-control" placeholder="Name of the Recipient"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"></span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                                aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append">
+                                <span class="input-group-text"></span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal"  style="border:1px solid green;">Send
+                        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="transactionHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol id="transaction-history-body">
+
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- table  -->
+    <div class="container" style="margin-top: 50px;">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr class="table-info">
+                        <th scope="col"><b>ID</b></th>
+                        <th scope="col"><b>Name</b></th>
+                        <th scope="col"><b>E-mail</b></th>
+                        <th scope="col"><b>Net Balance(in $)</b></th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr class="table-light" >
+                        <td scope="row">1</td>
+                        <td>Ram</td>
+                        <td>ram@gmail.com</td>
+                        <td>
+                            <p id="RamBankBalance">5000</p>
+                        </td>
+                    </tr>
+                    <tr class="table">
+                        <td scope="row">2</td>
+                        <td>Krishna</td>
+                        <td>krishna@email.com</td>
+                        <td>
+                            <p id="KrishnaBankBalance">34000</p>
+                        </td>
+                    </tr>
+                    <tr class="table">
+                        <td scope="row">3</td>
+                        <td>Chandra</td>
+                        <td>chandra@yahoo.com</td>
+                        <td>
+                            <p id="ChandraBankBalance">33000</p>
+                        </td>
+                    </tr>
+                    <tr class="table">
+                        <td scope="row">4</td>
+                        <td>Srinu</td>
+                        <td>srinu@gmail.com</td>
+                        <td>
+                            <p id="SrinuBankBalance">40000</p>
+                        </td>
+                    </tr>
+                    <tr class="table">
+                        <td scope="row">5</td>
+                        <td>John</td>
+                        <td>john@gmail.com</td>
+                        <td>
+                            <p id="JohnBankBalance">63300</p>
+                        </td>
+                    </tr>
+                    <tr class="table">
+                        <td scope="row">6</td>
+                        <td>Akhil</td>
+                        <td>akhil@yahoo.com</td>
+                        <td>
+                            <p id="AkhilBankBalance">1003</p>
+                        </td>
+                    </tr>
+                    <tr class="table">
+                        <td>7</td>
+                        <td>Rahul</td>
+                        <td>rahul@yahoo.com</td>
+                        <td>
+                            <p id="RahulBankBalance">5600</p>
+                        </td>
+                    </tr>
+                    <tr class="table">
+                        <td scope="row">8</td>
+                        <td>Dileep</td>
+                        <td>dileep@gmail.com</td>
+                        <td>
+                            <p id="DileepBankBalance">3560</p>
+                        </td>
+                    </tr>
+                    <tr class="table">
+                        <td scope="row">9</td>
+                        <td>Upendra</td>
+                        <td>upendra@yahoo.com</td>
+                        <td>
+                            <p id="UpendraBankBalance">4500</p>
+                        </td>
+                    </tr>
+                    <tr class="table">
+                        <td scope="row">10</td>
+                        <td>Sekhar</td>
+                        <td>sekhar@gmail.com</td>
+                        <td>
+                            <p id="SekharBankBalance">13500</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+
+
+            
+        </div>
+
+    <script type="text/javascript">
+        let myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText);
+
+function sendMoney(){
+   var enterName = document.getElementById("enterName").value;
+   var enterAmount = parseInt(document.getElementById("enterAmount").value);
+
+   if (enterAmount > 8000) {
+      alert("Insufficient Balance.")
+   } else {
+      var findUserBankAccount = enterName + "BankBalance";
+      var finalAmount = parseInt(document.getElementById(findUserBankAccount).innerHTML) + enterAmount;
+      var myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText) - enterAmount
+      document.getElementById("myAccountBalance").innerText = myAccountBalance
+      document.getElementById(findUserBankAccount).innerHTML = finalAmount;
+      alert(`Transaction Completed Sucessfully !!  
+      $${enterAmount} is sent to ${enterName}.`)
+
+      // transaction history 
+      var createPTag = document.createElement("li");
+      var textNode = document.createTextNode(`$${enterAmount} is sent to recepient with Username of ${enterName} on ${Date()}.`);
+      createPTag.appendChild(textNode);
+      var element = document.getElementById("transaction-history-body");
+      element.insertBefore(createPTag, element.firstChild);
+   }
+}
+
+
+
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+</body>
+</html>
